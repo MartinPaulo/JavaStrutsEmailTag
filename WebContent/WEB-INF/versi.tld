@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>2.2.3</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>versi</short-name>
+	<display-name>"Versi Tags"</display-name>
+	<description><![CDATA["versi provided JSP tags"]]></description>
+	<tag>
+		<name>emailAnchor</name>
+		<tag-class>au.edu.versi.tags.EmailAnchorTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>
+		  <![CDATA[Render an email address. Will wrap with JavaScript if so requested, so only rendered if a JavaScript engine is present.]]>
+		</description>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+                <![CDATA[id for referencing element]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>clazz</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+                <![CDATA[class of element]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>title</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+                <![CDATA[title for element]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>style</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+                <![CDATA[style, if any, for element]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>default</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+			    <![CDATA[The default email address that will be presented if none is found on the valuestack]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+			    <![CDATA[The email address that will be presented]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>writeWithJavaScript</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>
+			   <![CDATA[If true the email address will be written by JavaScript]]>
+			</description>
+		</attribute>
+	</tag>
+</taglib>

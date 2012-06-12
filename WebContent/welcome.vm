@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>Welcome</title>
+</head>
+
+<body>
+    #sactionmessage
+    <h2>Hello ${username}!</h2>
+    <p>You can be reached at: #semailAnchor("value=email" "title='World champ!'" "default=martin.paulo@gmail.com")</p>
+</body>
+</html>

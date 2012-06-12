@@ -1,0 +1,20 @@
+Project log
+===========
+
+A log of the design decision made during the course of the project.
+Based on the idea: http://www.drdobbs.com/architecture-and-design/232900498
+
+
+1st June (2012)
+===============
+
+The email obfuscation will be done by means of a struts 2 tag. When rendered the tag will insert the email
+address contained in the database in some obfuscated format. 
+
+8th June
+========
+
+Based on a quick read of http://en.wikipedia.org/wiki/Email_address_harvesting using a simple JavaScript
+obfuscation technique should repel most harvesters. The downside's are:
+a) the user has to have JavaScript enabled on their browsers before they can use the email.
+b) Spammers with JavaScript enabled tools will still be able to harvest the email address.
