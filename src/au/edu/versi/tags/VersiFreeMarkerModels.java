@@ -20,24 +20,32 @@ package au.edu.versi.tags;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts2.components.Component;
-import org.apache.struts2.views.freemarker.tags.TagModel;
 
 import com.opensymphony.xwork2.util.ValueStack;
 
 /**
- * This is the FreeMarker Model wrapping the Struts tag component.
- * @author Martin Paulo
+ * This is the set of Freemarker models that our tag library makes available.
+ * @author admin
+ *
  */
-public class EmailAnchorModel extends TagModel {
-
-	public EmailAnchorModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
-		super(stack, req, res);
+public class VersiFreeMarkerModels {
+	
+	protected ValueStack stack;
+	protected HttpServletRequest req;
+	protected HttpServletResponse res;
+	
+	protected EmailAnchorModel eam;
+	
+	public VersiFreeMarkerModels(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+		this.stack = stack;
+		this.req = req;
+		this.res = res;
 	}
 
-	@Override
-	protected Component getBean() {
-		return new EmailAnchor(stack);
+	public EmailAnchorModel getEmailAnchor() {
+		if (eam == null) {
+			eam = new EmailAnchorModel(stack, req, res);
+		}
+		return eam;
 	}
-
 }

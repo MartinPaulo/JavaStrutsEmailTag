@@ -18,3 +18,6 @@ Based on a quick read of http://en.wikipedia.org/wiki/Email_address_harvesting u
 obfuscation technique should repel most harvesters. The downside's are:
 a) the user has to have JavaScript enabled on their browsers before they can use the email.
 b) Spammers with JavaScript enabled tools will still be able to harvest the email address.
+
+We will have to add the JavaScript tag at the point of rendering: as we don't have a way of injecting a JavaScript file
+into the page header if this tag is used.
