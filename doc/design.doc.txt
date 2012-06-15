@@ -7,5 +7,5 @@ specification). No subject/body/cc/bcc is mentioned...
 
 The total length of the string attribute is limited to 256 characters.
 
-
+http://www.alistapart.com/articles/gracefulemailobfuscation/ is a good read on the topic.
 
